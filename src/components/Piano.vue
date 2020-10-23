@@ -3,18 +3,30 @@
         <div class="Piano-container">
             <div class="keys-whites">
                 <button class="key-white soundC" v-on:click="playAudio('/assets/sounds/C.mp3')" 
-                v-on:click.exact="key('soundC', 'white')" @mouseout="backKey('soundC', 'white')"><span class="sound">Do</span></button>
+                v-on:click.exact="key('soundC', 'white')" @mouseout="backKey('soundC', 'white')">
+                <span class="sound">Do</span></button>
                 <button class="key-white soundD" v-on:click="playAudio('/assets/sounds/D.mp3')" 
-                v-on:click.exact="key('soundD', 'white')" @mouseout="backKey('soundD', 'white')"><span class="sound">Re</span></button>
+                
+                v-on:click.exact="key('soundD', 'white')" @mouseout="backKey('soundD', 'white')">
+                <span class="sound">Re</span></button>
                 <button class="key-white soundE" v-on:click="playAudio('/assets/sounds/E.mp3')" 
-                v-on:click.exact="key('soundE', 'white')" @mouseout="backKey('soundE', 'white')"><span class="sound">Mi</span></button>
+                
+                v-on:click.exact="key('soundE', 'white')" @mouseout="backKey('soundE', 'white')">
+                <span class="sound">Mi</span></button>
                 <button class="key-white soundF" v-on:click="playAudio('/assets/sounds/F.mp3')" 
-                v-on:click.exact="key('soundF', 'white')" @mouseout="backKey('soundF', 'white')"><span class="sound">Fa</span></button>
+                
+                v-on:click.exact="key('soundF', 'white')" @mouseout="backKey('soundF', 'white')">
+                <span class="sound">Fa</span></button>
                 <button class="key-white soundG" v-on:click="playAudio('/assets/sounds/G.mp3')" 
-                v-on:click.exact="key('soundG', 'white')" @mouseout="backKey('soundG', 'white')"><span class="sound">Sol</span></button>
+                
+                v-on:click.exact="key('soundG', 'white')" @mouseout="backKey('soundG', 'white')">
+                <span class="sound">Sol</span></button>
                 <button class="key-white soundA" v-on:click="playAudio('/assets/sounds/A.mp3')" 
-                v-on:click.exact="key('soundA', 'white')" @mouseout="backKey('soundA', 'white')"><span class="sound">La</span></button>
+                
+                v-on:click.exact="key('soundA', 'white')" @mouseout="backKey('soundA', 'white')">
+                <span class="sound">La</span></button>
                 <button class="key-white soundB" v-on:click="playAudio('/assets/sounds/B.mp3')" 
+                
                 v-on:click.exact="key('soundB', 'white')" @mouseout="backKey('soundB', 'white')"><span class="sound">Si</span></button>
             </div>
             <div class="keys-blacks">
