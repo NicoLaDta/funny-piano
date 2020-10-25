@@ -2,32 +2,32 @@
     <div class="Piano">
         <div class="Piano-container">
             <div class="keys-whites">
-                <button class="key-white soundC" v-on:click="playAudio('/assets/sounds/C.mp3')" 
-                v-on:click.exact="keybord('soundC', 'white')" @mouseout="SecondaryKey('soundC', 'white')"><span class="sound">Do</span></button>
-                <button class="key-white soundD" v-on:click="playAudio('/assets/sounds/D.mp3')" 
-                v-on:click.exact="keybord('soundD', 'white')" @mouseout="SecondaryKey('soundD', 'white')"><span class="sound">Re</span></button>
-                <button class="key-white soundE" v-on:click="playAudio('/assets/sounds/E.mp3')" 
-                v-on:click.exact="keybord('soundE', 'white')" @mouseout="SecondaryKey('soundE', 'white')"><span class="sound">Mi</span></button>
-                <button class="key-white soundF" v-on:click="playAudio('/assets/sounds/F.mp3')" 
-                v-on:click.exact="keybord('soundF', 'white')" @mouseout="SecondaryKey('soundF', 'white')"><span class="sound">Fa</span></button>
-                <button class="key-white soundG" v-on:click="playAudio('/assets/sounds/G.mp3')" 
-                v-on:click.exact="keybord('soundG', 'white')" @mouseout="SecondaryKey('soundG', 'white')"><span class="sound">Sol</span></button>
-                <button class="key-white soundA" v-on:click="playAudio('/assets/sounds/A.mp3')" 
-                v-on:click.exact="keybord('soundA', 'white')" @mouseout="SecondaryKey('soundA', 'white')"><span class="sound">La</span></button>
-                <button class="key-white soundB" v-on:click="playAudio('/assets/sounds/B.mp3')" 
-                v-on:click.exact="keybord('soundB', 'white')" @mouseout="SecondaryKey('soundB', 'white')"><span class="sound">Si</span></button>
+                <button class="key-white C" v-on:click="playAudio('/assets/sounds/C.mp3')" 
+                v-on:click.exact="keybord('C', 'white')" @mouseout="SecondaryKey('soundC', 'white')"><span class="sound">Do</span></button>
+                <button class="key-white D" v-on:click="playAudio('/assets/sounds/D.mp3')" 
+                v-on:click.exact="keybord('D', 'white')" @mouseout="SecondaryKey('soundD', 'white')"><span class="sound">Re</span></button>
+                <button class="key-white E" v-on:click="playAudio('/assets/sounds/E.mp3')" 
+                v-on:click.exact="keybord('E', 'white')" @mouseout="SecondaryKey('soundE', 'white')"><span class="sound">Mi</span></button>
+                <button class="key-white F" v-on:click="playAudio('/assets/sounds/F.mp3')" 
+                v-on:click.exact="keybord('F', 'white')" @mouseout="SecondaryKey('soundF', 'white')"><span class="sound">Fa</span></button>
+                <button class="key-white G" v-on:click="playAudio('/assets/sounds/G.mp3')" 
+                v-on:click.exact="keybord('G', 'white')" @mouseout="SecondaryKey('soundG', 'white')"><span class="sound">Sol</span></button>
+                <button class="key-white A" v-on:click="playAudio('/assets/sounds/A.mp3')" 
+                v-on:click.exact="keybord('A', 'white')" @mouseout="SecondaryKey('soundA', 'white')"><span class="sound">La</span></button>
+                <button class="key-white B" v-on:click="playAudio('/assets/sounds/B.mp3')" 
+                v-on:click.exact="keybord('B', 'white')" @mouseout="SecondaryKey('soundB', 'white')"><span class="sound">Si</span></button>
             </div>
             <div class="keys-blacks">
-                <button class="key-black soundCc" v-on:click="playAudio('/assets/sounds/C%23.mp3')" 
-                v-on:click.exact="keybord('soundCc', 'black')" @mouseout="SecondaryKey('soundCc', 'black')"></button>
+                <button class="key-black Cc" v-on:click="playAudio('/assets/sounds/C%23.mp3')" 
+                v-on:click.exact="keybord('Cc', 'black')" @mouseout="SecondaryKey('soundCc', 'black')"></button>
                 <button class="key-black soundDd" v-on:click="playAudio('/assets/sounds/D%23.mp3')" 
-                v-on:click.exact="keybord('soundDd', 'black')" @mouseout="SecondaryKey('soundDd', 'black')"></button>
-                <button class="key-black soundFf" v-on:click="playAudio('/assets/sounds/F%23.mp3')" 
-                v-on:click.exact="keybord('soundFf', 'black')" @mouseout="SecondaryKey('soundFf', 'black')"></button>
-                <button class="key-black soundGg" v-on:click="playAudio('/assets/sounds/G%23.mp3')" 
-                v-on:click.exact="keybord('soundGg', 'black')" @mouseout="SecondaryKey('soundGg', 'black')"></button>
-                <button class="key-black soundAa" v-on:click="playAudio('/assets/sounds/A%23.mp3')" 
-                v-on:click.exact="keybord('soundAa', 'black')" @mouseout="SecondaryKey('soundAa', 'black')"></button>
+                v-on:click.exact="keybord('Dd', 'black')" @mouseout="SecondaryKey('soundDd', 'black')"></button>
+                <button class="key-black Ff" v-on:click="playAudio('/assets/sounds/F%23.mp3')" 
+                v-on:click.exact="keybord('Ff', 'black')" @mouseout="SecondaryKey('soundFf', 'black')"></button>
+                <button class="key-black Gg" v-on:click="playAudio('/assets/sounds/G%23.mp3')" 
+                v-on:click.exact="keybord('Gg', 'black')" @mouseout="SecondaryKey('soundGg', 'black')"></button>
+                <button class="key-black Aa" v-on:click="playAudio('/assets/sounds/A%23.mp3')" 
+                v-on:click.exact="keybord('Aa', 'black')" @mouseout="SecondaryKey('soundAa', 'black')"></button>
             </div>
         </div>
     </div>
@@ -58,73 +58,73 @@ export default {
                 case 81:
                     this.playAudio('/assets/sounds/C.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundC')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('C')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[0].style.color = "#FFFFFF";
                     break;
                 case 83:
                     this.playAudio('/assets/sounds/D.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundD')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('D')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[1].style.color = "#FFFFFF";
                     break;
                 case 68:
                     this.playAudio('/assets/sounds/E.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundE')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('E')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[2].style.color = "#FFFFFF";
                     break;
                 case 70:
                     this.playAudio('/assets/sounds/F.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundF')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('F')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[3].style.color = "#FFFFFF";
                     break;
                 case 71:
                     this.playAudio('/assets/sounds/G.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundG')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('G')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[4].style.color = "#FFFFFF";
                     break;
                 case 72:
                     this.playAudio('/assets/sounds/A.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundA')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('A')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
                     break;
                 case 74:
                     this.playAudio('/assets/sounds/B.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundB')[0].style.backgroundColor = "#FFD12D";
+                    document.getElementsByClassName('B')[0].style.backgroundColor = "#FFD12D";
                     document.getElementsByClassName('sound')[6].style.color = "#FFFFFF";
                     break;
                 case 90:
                     this.playAudio('/assets/sounds/C%23.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundCc')[0].style.backgroundColor = "#E6016F";
+                    document.getElementsByClassName('Cc')[0].style.backgroundColor = "#E6016F";
                     document.getElementsByClassName('sound')[0].style.color = "#FFFFFF";
                     break;
                 case 69:
                     this.playAudio('/assets/sounds/D%23.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundDd')[0].style.backgroundColor = "#E6016F";
+                    document.getElementsByClassName('Dd')[0].style.backgroundColor = "#E6016F";
                     document.getElementsByClassName('sound')[1].style.color = "#FFFFFF";
                     break;
                 case 84:
                     this.playAudio('/assets/sounds/F%23.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundFf')[0].style.backgroundColor = "#E6016F";
+                    document.getElementsByClassName('Ff')[0].style.backgroundColor = "#E6016F";
                     document.getElementsByClassName('sound')[3].style.color = "#FFFFFF";
                     break;
                 case 89:
                     this.playAudio('/assets/sounds/G%23.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundGg')[0].style.backgroundColor = "#E6016F";
+                    document.getElementsByClassName('Gg')[0].style.backgroundColor = "#E6016F";
                     document.getElementsByClassName('sound')[4].style.color = "#FFFFFF";
                     break;
                 case 85:
                     this.playAudio('/assets/sounds/A%23.mp3');
                     this.vEmoji.takeEmo();
-                    document.getElementsByClassName('soundAa')[0].style.backgroundColor = "#E6016F";
+                    document.getElementsByClassName('Aa')[0].style.backgroundColor = "#E6016F";
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
                     break;
             }
@@ -151,41 +151,43 @@ export default {
                 }
             }
             switch (key) {
-                case 'soundC':
+                case 'C':
                     document.getElementsByClassName('sound')[0].style.color = "#FFFFFF";
                     break;
-                case 'soundD':
+                case 'D':
                     document.getElementsByClassName('sound')[1].style.color = "#FFFFFF";
                     break;
-                case 'soundE':
+                case 'E':
                     document.getElementsByClassName('sound')[2].style.color = "#FFFFFF";
                     break;
-                case 'soundF':
+                case 'F':
                     document.getElementsByClassName('sound')[3].style.color = "#FFFFFF";
                     break;
-                case 'soundG':
+                case 'G':
                     document.getElementsByClassName('sound')[4].style.color = "#FFFFFF";
                     break;
-                case 'soundA':
+                case 'A':
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
                     break;
-                case 'soundB':
+                case 'B':
                     document.getElementsByClassName('sound')[6].style.color = "#FFFFFF";
                     break;
-                case 'soundCc':
+                case 'Cc':
                     document.getElementsByClassName('sound')[0].style.color = "#FFFFFF";
                     break;
-                case 'soundDd':
+                case 'Dd':
                     document.getElementsByClassName('sound')[1].style.color = "#FFFFFF";
                     break;
-                case 'soundFf':
+                case 'Ff':
                     document.getElementsByClassName('sound')[3].style.color = "#FFFFFF";
                     break;
-                case 'soundGg':
+                case 'Gg':
                     document.getElementsByClassName('sound')[4].style.color = "#FFFFFF";
                     break;
-                case 'soundAa':
+                case 'Aa':
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
+                    break;
+                default:
                     break;
             }
         },
