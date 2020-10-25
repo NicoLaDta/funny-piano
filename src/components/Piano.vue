@@ -130,8 +130,7 @@ export default {
             }
             this.start = true
         },
-        OnKeyUp(e) {
-            console.log(e)
+        OnKeyUp() {
             this.start = false
             for (let i = 0; i < 7; i++) {
                 document.getElementsByClassName('key-white')[i].style.backgroundColor = "#FFFFFF";
@@ -191,12 +190,12 @@ export default {
             }
         },
         SecondaryKey(key, touch) {
-            if (key == 'white') {
-                document.getElementsByClassName(key)[0].style.backgroundColor = "#FFFFFF";
-            } else {
-                if (touch == 'black') {
+            if (touch == 'black') {
                 document.getElementsByClassName(key)[0].style.backgroundColor = "#000000";
-                }
+            } else {
+                if (key == 'white') {
+                document.getElementsByClassName(key)[0].style.backgroundColor = "#FFFFFF";
+               } 
             }
             for (let k = 0; k < 7; k++) {
                 document.getElementsByClassName('sound')[k].style.color = "rgba(255, 255, 255, 0.4)";
