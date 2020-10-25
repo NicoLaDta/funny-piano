@@ -36,7 +36,6 @@
 <script>
 export default {
     mounted() {
-        console.log(this)
         this.vEmoji = this.$parent.$children[0]
         this.addListeners()
         this.start = false
@@ -52,7 +51,6 @@ export default {
             window.addEventListener('keyup', this.OnKeyUp)
         },
         OnKeyDown(e) {
-            console.log(e)
             if (this.start) return
             switch (e.keyCode) {
                 case 81:
@@ -131,7 +129,6 @@ export default {
             this.start = true
         },
         OnKeyUp(e) {
-            console.log(e)
             this.start = false
             for (let i = 0; i < 7; i++) {
                 document.getElementsByClassName('key-white')[i].style.backgroundColor = "#FFFFFF";
