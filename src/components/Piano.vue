@@ -3,31 +3,31 @@
         <div class="Piano-container">
             <div class="keys-whites">
                 <button class="key-white C" v-on:click="playAudio('/assets/sounds/C.mp3')" 
-                v-on:click.exact="keybord('C', 'white')" @mouseout="SecondaryKey('soundC', 'white')"><span class="sound">Do</span></button>
+                v-on:click.exact="keybord('C', 'white')" @mouseout="SecondaryKey('C', 'white')"><span class="sound">Do</span></button>
                 <button class="key-white D" v-on:click="playAudio('/assets/sounds/D.mp3')" 
-                v-on:click.exact="keybord('D', 'white')" @mouseout="SecondaryKey('soundD', 'white')"><span class="sound">Re</span></button>
+                v-on:click.exact="keybord('D', 'white')" @mouseout="SecondaryKey('D', 'white')"><span class="sound">Re</span></button>
                 <button class="key-white E" v-on:click="playAudio('/assets/sounds/E.mp3')" 
-                v-on:click.exact="keybord('E', 'white')" @mouseout="SecondaryKey('soundE', 'white')"><span class="sound">Mi</span></button>
+                v-on:click.exact="keybord('E', 'white')" @mouseout="SecondaryKey('E', 'white')"><span class="sound">Mi</span></button>
                 <button class="key-white F" v-on:click="playAudio('/assets/sounds/F.mp3')" 
-                v-on:click.exact="keybord('F', 'white')" @mouseout="SecondaryKey('soundF', 'white')"><span class="sound">Fa</span></button>
+                v-on:click.exact="keybord('F', 'white')" @mouseout="SecondaryKey('F', 'white')"><span class="sound">Fa</span></button>
                 <button class="key-white G" v-on:click="playAudio('/assets/sounds/G.mp3')" 
-                v-on:click.exact="keybord('G', 'white')" @mouseout="SecondaryKey('soundG', 'white')"><span class="sound">Sol</span></button>
+                v-on:click.exact="keybord('G', 'white')" @mouseout="SecondaryKey('G', 'white')"><span class="sound">Sol</span></button>
                 <button class="key-white A" v-on:click="playAudio('/assets/sounds/A.mp3')" 
-                v-on:click.exact="keybord('A', 'white')" @mouseout="SecondaryKey('soundA', 'white')"><span class="sound">La</span></button>
+                v-on:click.exact="keybord('A', 'white')" @mouseout="SecondaryKey('A', 'white')"><span class="sound">La</span></button>
                 <button class="key-white B" v-on:click="playAudio('/assets/sounds/B.mp3')" 
-                v-on:click.exact="keybord('B', 'white')" @mouseout="SecondaryKey('soundB', 'white')"><span class="sound">Si</span></button>
+                v-on:click.exact="keybord('B', 'white')" @mouseout="SecondaryKey('B', 'white')"><span class="sound">Si</span></button>
             </div>
             <div class="keys-blacks">
                 <button class="key-black Cc" v-on:click="playAudio('/assets/sounds/C%23.mp3')" 
-                v-on:click.exact="keybord('Cc', 'black')" @mouseout="SecondaryKey('soundCc', 'black')"></button>
-                <button class="key-black soundDd" v-on:click="playAudio('/assets/sounds/D%23.mp3')" 
-                v-on:click.exact="keybord('Dd', 'black')" @mouseout="SecondaryKey('soundDd', 'black')"></button>
+                v-on:click.exact="keybord('Cc', 'black')" @mouseout="SecondaryKey('Cc', 'black')"></button>
+                <button class="key-black Dd" v-on:click="playAudio('/assets/sounds/D%23.mp3')"
+                v-on:click.exact="keybord('Dd', 'black')" @mouseout="SecondaryKey('Dd', 'black')"></button>
                 <button class="key-black Ff" v-on:click="playAudio('/assets/sounds/F%23.mp3')" 
-                v-on:click.exact="keybord('Ff', 'black')" @mouseout="SecondaryKey('soundFf', 'black')"></button>
+                v-on:click.exact="keybord('Ff', 'black')" @mouseout="SecondaryKey('Ff', 'black')"></button>
                 <button class="key-black Gg" v-on:click="playAudio('/assets/sounds/G%23.mp3')" 
-                v-on:click.exact="keybord('Gg', 'black')" @mouseout="SecondaryKey('soundGg', 'black')"></button>
+                v-on:click.exact="keybord('Gg', 'black')" @mouseout="SecondaryKey('Gg', 'black')"></button>
                 <button class="key-black Aa" v-on:click="playAudio('/assets/sounds/A%23.mp3')" 
-                v-on:click.exact="keybord('Aa', 'black')" @mouseout="SecondaryKey('soundAa', 'black')"></button>
+                v-on:click.exact="keybord('Aa', 'black')" @mouseout="SecondaryKey('Aa', 'black')"></button>
             </div>
         </div>
     </div>
@@ -39,7 +39,6 @@ export default {
         this.vEmoji = this.$parent.$children[0]
         this.start = false
         this.addListeners()
-        this.removeListeners()
     },
     methods: {
         playAudio: function(url) {
@@ -49,8 +48,8 @@ export default {
         },
 
         addListeners() {
-            window.addEventListener('keydown', this.OnKeyDown)
-            window.addEventListener('keyup', this.OnKeyUp)
+            document.addEventListener('keydown', this.OnKeyDown)
+            document.addEventListener('keyup', this.OnKeyUp)
         },
         OnKeyDown(e) {
             if (this.start) return
@@ -142,15 +141,15 @@ export default {
                 document.getElementsByClassName('sound')[k].style.color = "rgba(255, 255, 255, 0.4)";
             }
         },
-        keybord(key, touch) {
-            if (touch == 'white') {
-                document.getElementsByClassName(key)[0].style.backgroundColor = "#FFD12D";
+        keybord(j, k) {
+            if (k == 'white') {
+                document.getElementsByClassName(j)[0].style.backgroundColor = "#FFD12D";
             } else {
-                if (touch == 'black') {
-                document.getElementsByClassName(key)[0].style.backgroundColor = "#E6016F";
+                if (k == 'black') {
+                document.getElementsByClassName(j)[0].style.backgroundColor = "#E6016F";
                 }
             }
-            switch (key) {
+            switch (j) {
                 case 'C':
                     document.getElementsByClassName('sound')[0].style.color = "#FFFFFF";
                     break;
@@ -164,7 +163,7 @@ export default {
                     document.getElementsByClassName('sound')[3].style.color = "#FFFFFF";
                     break;
                 case 'G':
-                    document.getElementsByClassName('sound')[4].style.color = "#FFFFFF";
+                    document.getElementsByClassName('sound')[4].style.coAalor = "#FFFFFF";
                     break;
                 case 'A':
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
@@ -187,15 +186,13 @@ export default {
                 case 'Aa':
                     document.getElementsByClassName('sound')[5].style.color = "#FFFFFF";
                     break;
-                default:
-                    break;
             }
         },
         SecondaryKey(key, touch) {
             if (touch == 'black') {
                 document.getElementsByClassName(key)[0].style.backgroundColor = "#000000";
             } else {
-                if (key == 'white') {
+                if (touch == 'white') {
                 document.getElementsByClassName(key)[0].style.backgroundColor = "#FFFFFF";
                } 
             }
@@ -203,10 +200,6 @@ export default {
                 document.getElementsByClassName('sound')[k].style.color = "rgba(255, 255, 255, 0.4)";
             }
         },
-        removeListeners() {
-            window.removeEventListener('keydown', this.OnKeyDown)
-            window.removeEventListener('keyup', this.OnKeyUp)
-        }
     }
 }
 </script>
